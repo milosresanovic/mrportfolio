@@ -1,0 +1,690 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+$tamno_plava: #3e64ff;
+$svetlo_plava: rgb(230, 235, 255);
+$plava: #007bff;
+$aple_font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+:root{
+    --mojaBoja: #3e64ff;
+}
+@mixin flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@font-face {
+    font-family: mojFont;
+    src: url(fonts/noviFont.ttf);
+  }
+#pocetniEkran{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.blokPozadina{
+    width: 50%;
+    height: inherit;
+    float: left;
+}
+#preko{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+.plava{
+    background-color:$svetlo_plava;
+}
+#navigacija{
+    width: 60%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo{
+    width: 111px;
+    height:50px;
+    margin:5px;
+    background-image: url('../img/logo.png');
+    background-size: inherit;
+    background-position: 0px 0px;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    float: left;
+    margin: 10px;
+    padding:10px;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #000000;
+    font-family: $aple_font;
+}
+nav ul li a:hover{
+    border-bottom: 1px solid $tamno_plava;
+}
+#burger{
+    display: none;
+}
+#naslov{
+    text-align: center;
+    margin-top: 35vh;
+}
+#naslov div p{
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--mojaBoja);
+    font-family: $aple_font;
+}
+#naslov div h1{
+    font-size: 70px;
+    font-weight: bold;
+    color: #000000;
+    font-family: $aple_font;
+    margin-bottom: 15px;
+}
+#naslov div h2{
+    font-weight: bold;
+    font-family: $aple_font;
+    font-size: 2.2rem;
+}
+#naslov div h2 span{
+    color: var(--mojaBoja);
+    text-decoration: underline;
+}
+#strelicaDole{
+    width: 80px;
+    height: 80px;
+    transform: rotate(45deg);
+    background-color: $svetlo_plava;
+    margin:18vh auto;
+}
+#strelicaDole i{
+    transform: rotate(-45deg);
+    color: var(--mojaBoja);
+    font-size: 25px;
+    animation-name: example;
+    animation-duration: 1.2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+@keyframes example {
+    from {margin-top:10px; margin-left: 10px; padding-left: 5px; padding-top: 5px;}
+    to {margin-top:35px; margin-left: 35px;padding-left: 5px; padding-top: 5px;}
+}
+
+#oMeni{
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    margin:0px auto;
+}
+.karakteristike{
+    width: 600px;
+    height: 600px;
+}
+.slika{
+    background-image: url('../img/moja.jpg');
+    background-size: cover;
+}
+@mixin naslov2 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+    margin:30px;
+}
+.naslov2{
+    @include naslov2();
+}
+.opis h2{
+    @include naslov2();
+}
+.opis p{
+    margin: 40px 30px 40px 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:#999999;
+    font-size: 16px;
+}
+.opis ul{
+    list-style: none;
+    padding-left: 30px;
+}
+.opis ul li{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.opis ul li span:first-child{
+    display: inline-block;
+    width: 150px;
+}
+.opis ul li span:last-child{
+    color: #999999;
+}
+.opis p:last-child{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #000000;
+}
+.opis p:last-child span{
+    color:var(--mojaBoja);
+    font-weight: bold;
+}
+#cv{
+    padding:15px 0px;
+    background-color: var(--mojaBoja);
+    border-radius: 30px;
+    width: 120px;
+    text-align: center;
+    margin-left: 30px;
+}
+#cv p{
+    margin:0px;
+    padding:0px;
+    font-size: 12px;
+    font-weight: 800;
+    color: white;
+}
+@mixin boxSlike {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 0px;
+    padding:0px;
+}
+@mixin novaSekcija{
+    margin:80px auto;
+    padding:0px;
+}
+#deoZaJezike{
+    width: 1100px;
+    @include novaSekcija();
+}
+#jezici{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.jezik{
+    @include boxSlike;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 15%;
+}
+.jezik img{
+    max-width: 100%;
+}
+.plavTekst{
+    color: $tamno_plava;
+}
+@mixin naslov3 {
+    font-family: $aple_font;  
+    font-size: 1.25rem;
+    color: #000;
+    font-weight: 700 !important;  
+}
+.rotiraj20{
+    transform: rotate(-20deg);
+    top: 14px;
+    left:3px  !important;
+}
+.rotiraj75{
+    transform: rotate(-90deg);
+    top:40px;
+    left:40px !important;
+}
+.rotiraj90{
+    transform:rotate(-36deg);
+    top:24px;
+    left: 7px !important;
+}
+#skills{
+    width: 1100px;
+    @include novaSekcija();
+    /* background-color: gray; */
+
+    #grupisaneVestine{
+        display: flex;
+        justify-content: space-around;
+
+        .vestina{
+            @include boxSlike();
+            width: 25%;
+            height: 350px;
+            /* background-color: silver; */
+            text-align: center;
+            h3{
+                margin-top: 20px;
+                @include naslov3();
+            }
+
+            .krug{
+                width: 160px;
+                height: 160px;
+                border:5px solid $svetlo_plava;
+                border-radius: 90px;
+                margin: 30px auto;
+                @include flex-center();
+                position: relative;
+
+
+                .desniPolukrug{
+                    width: 74px;
+                    height: 148px;
+                    border:6px solid $plava;
+                    border-top-right-radius: 90px;
+                    border-bottom-right-radius: 90px;
+                    border-left: 0px;
+                    position: absolute;
+                    left: 80px;
+                }
+                .leviPolukrug{
+                    width: 74px;
+                    height: 148px;
+                    border:6px solid $plava;
+                    border-top-left-radius: 90px;
+                    border-bottom-left-radius: 90px;
+                    border-right: 0px;
+                    position: absolute;
+                    left: 0px;
+                }
+                .broj{
+                    width: 70px;
+                    height: 70px;
+                    @include flex-center();
+
+                    .brojProcenata{
+                        color: #000;
+                        font-size: 21px;
+                        font-weight: 700;
+                        font-family: $aple_font;
+                    }
+                }
+            }
+            p{
+                font-family: $aple_font;
+                font-size: 15px;
+                color: #000;
+            }
+        }
+    }
+}
+.procenti_90{width: 90%;}
+.procenti_85{width:85%;}
+.procenti_80{width: 80%;}
+.procenti_75{width: 75%;}
+.procenti_70{width: 70%;}
+.procenti_60{width: 60%;}
+.procenti_50{width: 50%;}
+.procenti_40{width: 40%;}
+.procenti_30{width: 30%;}
+.procenti_25{width: 25%;}
+.procenti_20{width: 20%;}
+.procenti_15{width: 15%;}
+.procenti_10{width: 10%;}
+
+@mixin tekstZaSkilove{
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    font-family: $aple_font;
+}
+#sekcijaSkilova{
+    width: 1000px;
+    margin:0px auto;
+    @include novaSekcija();
+
+    #sviSkilovi{
+        width: 100%;
+        @include flex-center();
+        .grupisaniSkilovi{
+            width: 50%;
+            height: 100%;
+            padding:20px;
+        }
+        .red{
+            width: 100%;
+            margin-bottom: 30px;
+            /* background-color: blue; */
+
+            .naziv_procenat{
+                display: flex;
+                justify-content: space-between;
+                .language{
+                    @include tekstZaSkilove();
+                }
+                .percentage{
+                    text-align: center;
+                    @include tekstZaSkilove();
+                }
+                margin-bottom: 10px;
+            }
+            .linija{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                border-radius: 2px;
+                .levaLinija{
+                    height: 10px;
+                    background-color: $tamno_plava;
+                }
+                .desnaLinija{
+                    height: 10px;
+                    background-color: $svetlo_plava;
+                }
+            }
+
+        }
+    }
+}
+#sekcijaObrazovanje{
+    @include novaSekcija();
+    width: 1040px;
+    
+    h2{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    #grupisano{
+        width: 100%;
+        margin:0px auto;
+        .elementObrazovanje{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid rgba(0,0,0,.1);
+            .slicicaObrazovanje{
+                width: 55px;
+                .ikonica{
+                    width: 40px;
+                    height: 40px;
+                    @include flex-center();
+                    color: white;
+                    background-color: $tamno_plava;
+                    border-radius: 100px;
+                }
+            }
+            .opisObrazovanja{
+                font-family: $aple_font;
+                margin-left: 15px;
+                p:nth-child(1){
+                    color: $tamno_plava;
+                    font-weight: 800;
+                    margin-top: 0px;
+                }
+                h3{
+                   margin:7px 0px 5px 0px; 
+                   @include naslov3();
+                   font-weight: 800;
+                   font-size: 24px;
+                }
+                h4{
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+                p{
+                    color: #999;
+                    margin-top: 5px;
+                    font-size: 16px;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
+#sekcijaFreelancing{
+    width: 100%;
+    height: 450px;
+    @include novaSekcija();
+    background-image: url('../img/pozadina.jpg');
+    position: relative;
+    #freelancing{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(62, 100, 255,0.7);
+        /* opacity: .7; */
+        
+        .freelancingTekst{
+            text-align: center;
+            width: 70%;
+            margin:70px auto;
+            h2{
+                @include naslov2();
+                color: white;
+                font-family: $aple_font;
+                font-weight: 900;
+                font-size: 45px;
+                span{
+                    color:#a0f669 ;
+                }
+            }
+            p{
+                color: white;
+                font-family: $aple_font;
+                font-size: 18px;
+                line-height: 1.8;
+                font-weight: 600;
+                width: 80%;
+                margin:0px auto;
+            }
+        }
+        .freelancingDugme{
+            width: 75px;
+            padding:15px 30px 15px 30px;
+            background: $tamno_plava  !important;
+            opacity: 1;
+            border: 1px solid #3e64ff!important;
+            color: white;
+            margin:0px auto;
+            font-family: $aple_font;
+            font-weight: 600;
+            border-radius: 25px;
+            @include flex-center();
+        }
+    }
+}
+.centar{
+    background-position-y: center; background-position-x: center;  background-size: cover;
+}
+.prvi{background-image: url('../img/projekat1.jpg');}
+.drugi{background-image: url('../img/projekat2.jpg');}
+.treci{background-image: url('../img/projekat3.jpg');}
+.cetvrti{background-image: url('../img/projekat4.jpg');}
+.peti{background-image: url('../img/projekat5.jpg');}
+.sesti{background-image: url('../img/projekat6.jpg')}
+
+#sekcijaProjekti{
+    @include novaSekcija();
+    width: 100%;
+    /* height: 700px; */
+    h2{
+        text-align: center;
+        @include naslov2();
+    }
+    .redProjekata{
+        /* height: 350px; */
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .blokProjekat{
+        width:(100%/3);
+        height: 350px;
+        background-color: #222;
+        position: relative;
+        z-index: 10;
+        .pozadinaSlika{
+            position: absolute;
+            width: 100%;
+            height: 350px;
+            z-index: 20;
+        }
+        .pozadinaSlika:hover{
+            z-index: 2;
+        }
+        .blokTekst{
+            position: absolute;
+            width: 100%;
+            height: 350px;
+            @include flex-center();
+            z-index: 5;
+            background: rgba(62, 100, 255,0.8);
+        }
+        .blokTekst:hover{
+            background: rgba(62, 100, 255,0.8);
+            z-index: 25;
+        }
+        .blokTekst div{
+            @include flex-center();
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            color: white;
+            font-family: $aple_font;
+            h3{
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+.formaPozadina{
+    background-color: $svetlo_plava;
+}
+
+#sekcijaForma{
+    width: 100%;
+    h2{
+        @include naslov2();
+        text-align: center;
+    }
+    #regionForma{
+        width: 1100px;
+        margin:0px auto;
+        display: flex;
+        justify-content: center;
+        .opis{
+            #forma{
+                margin:48px;
+                form input[type=text], textarea{
+                    height: 48px;
+                    font-size: 18px;
+                    font-family: $aple_font;
+                    width: 90%;
+                    margin-bottom: 20px;
+                    padding: .375rem .75rem;
+                    border-radius: 5px;
+                    font-weight: 400;
+                    box-shadow: none;
+                    border: 1px solid #ced4da;
+                }
+            }
+        }
+    }
+}
+#dugme{
+    background: $tamno_plava;
+    border: 1px solid $tamno_plava;
+    color: #fff; 
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    padding:16px 48px;
+    border-radius: 50px;
+}
+#dugme:hover{
+    color: #000;
+}
+
+.textarea{
+    height: 120px !important;
+}
+.tekstCentar{
+    text-align: center;
+}
+footer{
+    width: 100%;
+    background-color: #000;
+    /* height: 500px; */
+    padding-top: 100px;
+    padding-bottom: 10px;
+    #coverFooter{
+        margin:0px auto;
+        width: 1100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .futerRed{
+            display: flex;
+            justify-content: space-between;
+            p{
+                color: rgba(255,255,255,.7);
+            }
+            .blokFooter{
+                width: 22%;
+                height: 300px;
+                /* background-color: red; */
+                div h3{
+                    color: #fff;
+                    font-family: $aple_font;
+                    margin-bottom: 25px;
+                    font-size: 22px;
+                    font-weight: 600;
+                }
+                div p{
+                    color: rgba(255,255,255,.7);
+                    font-family: $aple_font;
+                    font-size: 16px;
+                    line-height: 1.8;
+                    font-weight: 400;
+                }
+                div ul{
+                    list-style: none;
+                }
+                div ul li {
+                    color: rgba(255,255,255,.7);
+                    font-family: $aple_font;
+                    font-weight: 400;
+                    line-height: 1.8;
+                }
+                .soc{
+                    @include flex-center();
+                    justify-content: left;
+                    margin: 40px 0px 16px 0px;
+                    div{
+                        @include flex-center();
+                        /* padding: 12px; */
+                        background: rgba(255,255,255,.1);
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                        margin-right: 9px;
+                        
+                        i{
+                            font-size: 21px;
+                            color: rgba(255,255,255,.6);
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@import "responsive";
+@import "config";
