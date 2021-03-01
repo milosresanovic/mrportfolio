@@ -606,6 +606,13 @@ nav ul li a:hover{
 .tekstCentar{
     text-align: center;
 }
+@mixin fontFooter {
+    text-decoration: none;
+    color: rgba(255,255,255,.7);
+    font-family: $aple_font;
+    font-weight: 400;
+     line-height: 1.8;
+}
 footer{
     width: 100%;
     background-color: #000;
@@ -637,21 +644,22 @@ footer{
                     font-weight: 600;
                 }
                 div p{
-                    color: rgba(255,255,255,.7);
-                    font-family: $aple_font;
-                    font-size: 16px;
-                    line-height: 1.8;
-                    font-weight: 400;
+                    @include fontFooter();
                 }
                 div ul{
                     list-style: none;
                 }
-                div ul li {
+                div ul li  {
                     color: rgba(255,255,255,.7);
                     font-family: $aple_font;
-                    font-weight: 400;
-                    line-height: 1.8;
+                    i{
+                        color: rgba(255,255,255,.7);
+                    }
+                    a{
+                        @include fontFooter();
+                    }
                 }
+
                 .soc{
                     @include flex-center();
                     justify-content: left;
