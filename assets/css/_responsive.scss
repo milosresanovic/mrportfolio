@@ -221,6 +221,12 @@
           width: 685px;
           .futerRed{
               justify-content: space-around;
+              .blokFooter{
+                width:24% ;
+                div ul li{
+                  font-size: 15px;
+                }
+              }
           }
       }
     }

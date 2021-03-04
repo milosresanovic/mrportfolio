@@ -1076,6 +1076,12 @@ footer #coverFooter .futerRed .blokFooter .soc div i {
   footer #coverFooter .futerRed {
     justify-content: space-around;
   }
+  footer #coverFooter .futerRed .blokFooter {
+    width: 24%;
+  }
+  footer #coverFooter .futerRed .blokFooter div ul li {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 740px) {
