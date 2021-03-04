@@ -479,14 +479,19 @@ nav ul li a:hover{
             background: $tamno_plava  !important;
             opacity: 1;
             border: 1px solid #3e64ff!important;
-            color: white;
             margin:0px auto;
-            font-family: $aple_font;
-            font-weight: 600;
             border-radius: 25px;
             @include flex-center();
+            color: white;
+            
         }
     }
+}
+#link {
+    text-decoration: none;
+    color: white  !important;
+    font-family: $aple_font;
+    font-weight: 600;
 }
 .centar{
     background-position-y: center; background-position-x: center;  background-size: cover;
